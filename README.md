@@ -78,3 +78,8 @@ install express js:
 ```sh
 npm install express
 ```
+
+start nodejs server on https://localhost:5000 with
+```sh
+npm start
+```
