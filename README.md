@@ -61,3 +61,20 @@ Granger Innovation Prize
     ```shell
     npm install
     ```
+
+# Initial Setup Notes For Team
+
+create `package.json` file:
+```sh
+npm init -y
+```
+
+install mapnik:
+```sh
+npm install @mapnik/mapnik
+```
+
+install express js:
+```sh
+npm install express
+```
