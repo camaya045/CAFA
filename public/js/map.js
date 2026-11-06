@@ -21,7 +21,7 @@ async function fetchOpenAirChicagoData() {
 		}
 		const data = await response.json();
 		for(var x = 0; x < data.length; ++x) {
-			const coord = [data.at(x).location.coordinates.at(1), data.at(x).location.coordinates.at(0)];
+			const coord = [data.at(x).latitude, data.at(x).longitude];
 			const sensorName = data.at(x).sensor_name;
 			new Circle(coord, {
 				color: 'red',
@@ -37,3 +37,15 @@ async function fetchOpenAirChicagoData() {
 	}
 }
 fetchOpenAirChicagoData();
+
+async function fetchDataPoints() {
+	fetch('/dataPoints').then(response => {
+		if (!response.ok) {
+		  throw new Error(`HTTP error! Status: ${response.status}`);
+		}
+		return response.text();
+	}).then(data => {
+		console.log(data);
+	}).catch(error => console.error('Request failed', error));
+}
+fetchDataPoints();
