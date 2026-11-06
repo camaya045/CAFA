@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- load leaflet -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.2/dist/leaflet.css">
@@ -9,20 +10,7 @@
 	</script>
 </head>
 <body>
-	<div id="map" style="height: 400px"></div>
-	<script type="module">
-		import {LeafletMap, TileLayer} from 'leaflet';
-
-		// the map code goes here
-		const chicagoCenterLoopCoordinates = [41.882081, -87.630951];
-		const BronzeVilleIITCoordinates = [41.831966, -87.626120];
-		const startingZoom = 13;
-
-		const map = new LeafletMap('map').setView(chicagoCenterLoopCoordinates, startingZoom);
-		new TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			maxZoom: 19,
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-		}).addTo(map);
-	</script>
+	<div id="map" style="height: 95dvh"></div>
+	<script type="module" src="js/map.js"></script>
 </body>
 </html>
