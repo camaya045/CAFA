@@ -9,8 +9,11 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Redirecting landing page to main.html
+var totalVisitsSinceBoot = 0;
 app.get('/', async (req, res) => {
-    console.log("main page");
+	const visitorIp = req.ip;
+	console.log(`visitor: ${visitorIp}`);
+    console.log(`totalVisitsSinceBoot: ${++totalVisitsSinceBoot}`);
     return res.sendFile(path.join(__dirname, 'public', 'main.html'));
 });
 
