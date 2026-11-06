@@ -69,11 +69,6 @@ create `package.json` file:
 npm init -y
 ```
 
-install mapnik:
-```sh
-npm install @mapnik/mapnik
-```
-
 install express js:
 ```sh
 npm install express
