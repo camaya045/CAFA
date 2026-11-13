@@ -21,7 +21,11 @@ app.get('/dataPoints', async (req, res) => {
 	console.log("Received GET Request (dataPoints)");
 	try {
 		res.set('Content-Type', 'text/plain');
-		res.send('status: sending...');
+		res.sendFile(path.join(__dirname, 'resources/total.txt'), (err) => {
+			if(err) {
+				res.status(500).send('Error sending dataPoints!');
+			}
+		});
 	} catch(err) {
 		res.status(500).send('Error sending dataPoints!');
 	}
