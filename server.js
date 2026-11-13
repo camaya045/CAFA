@@ -21,7 +21,7 @@ app.get('/dataPoints', async (req, res) => {
 	console.log("Received GET Request (dataPoints)");
 	try {
 		res.set('Content-Type', 'text/plain');
-		res.send('status: defecating');
+		res.send('status: sending...');
 	} catch(err) {
 		res.status(500).send('Error sending dataPoints!');
 	}
