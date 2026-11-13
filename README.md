@@ -1,6 +1,11 @@
 # CAFA
 Granger Innovation Prize
 
+# Thanks
+Thank you to the following for FOSS mapping technologies:
+- [leaflet](https://leafletjs.com/index.html)
+- [openstreetmap](https://www.openstreetmap.org)
+
 # Node Server Setup
 1. Make sure you have `node` and `npm` installed on your machine
 
@@ -62,7 +67,7 @@ Granger Innovation Prize
     npm install
     ```
 
-# Initial Setup Notes For Team
+# Initial Project Setup Notes For Team
 
 create `package.json` file:
 ```sh
