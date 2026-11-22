@@ -78,3 +78,10 @@ async function fetchDataPoints() {
 	}).catch(error => console.error('Request failed', error));
 }
 fetchDataPoints();
+
+//webserial button:
+const webserialButton = document.getElementById('webserial');
+webserialButton.addEventListener("click", function() {
+	const baseurl = `${window.location.origin}`;
+	window.location.href = `${baseurl}/webserial.html`;
+});
